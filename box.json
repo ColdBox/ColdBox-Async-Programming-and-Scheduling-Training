@@ -1,11 +1,9 @@
 {
     "dependencies":{
-        "coldbox":"be",
-        "testbox":"*"
+        "coldbox":"^6"
     },
     "installPaths":{
-        "coldbox":"coldbox/",
-        "testbox":"testbox/"
+        "coldbox":"coldbox/"
     },
     "scripts":{
         "run":"task run Run",
