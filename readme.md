@@ -1,6 +1,7 @@
-# To The Future With `cbFutures` 🚀
+# Async Programming and Scheduling 🚀🚀🚀
 
-> by Luis Majano - Ortus Solutions
+> by Eric Peterson & Luis Majano - Ortus Solutions
+
 
 In this session we will explore the **asynchronous** and **parallel** programming constructs built into **ColdBox 6**. Java has supported a robust and functional approach to asynchronous programming since JDK8 and now it is available to us all in the Coldfusion (CFML) ⚡ World! To the future!
 
