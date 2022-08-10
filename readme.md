@@ -87,7 +87,7 @@ In this session, we will explore the concepts of asynchronous and parallel progr
       * Easy to spot an asynchronous developers...... They are in the corner, crying! 😭
     * [] 🤢 We have threa approaches to threading which are extremely simplistic and not very powerful at all.
 
-## Intro to ColdBox Futures
+### Intro to ColdBox Futures
 
 * [] ColdBox Futures are similar to JavaScript Promises but backed by the Java API of `CompletableFuture`
   * [] JDK 8 Introduced `CompletableFutures`, `CompletionStages`, Executors, Lambdas and much more.
@@ -109,7 +109,7 @@ In this session, we will explore the concepts of asynchronous and parallel progr
   * [] Creating the Future!!
     * [] [cbFutures Stages](samples/04-cbfutures-stages.md)
     * [] [Create a future](samples/05-creating-future.cfc)
-    * [] Excercises
+    * [] Excercises - @eric to complete
       * Make a future that prints to the console
       * Make a future that returns a message to print to the console after 2 seconds
       * Something about timeout and default values….
@@ -122,38 +122,70 @@ In this session, we will explore the concepts of asynchronous and parallel progr
 
 ### Magical Pipelines
 
-
-* [] 🎩 [Magical Pipelines](samples/07-then.cfc)
+* [] 🎩 [Magical Pipelines](samples/06-then.cfc)
   * [] Java API: `thenApply()`, `thenAccept()`, `thenRun()`, why?
   * [] CF API: `then()` and `thenRun()` (Easier + Dynamic API)
-    * [] Curiosity: CompletableFutures never end!  This is So Ironic! Sharknado! :shark:
-  * [Data Transformations](samples/08-data-transformations.cfc)
-  * [Dealing with Exceptions](samples/09-exceptions.cfc)
-  * [Dealing with Timeouts](samples/10-timeouts.cfc)
+    * [] Curiosity: `CompletableFutures` never end!  This is So Ironic! Sharknado! :shark:
+  * [Data Transformations](samples/07-data-transformations.cfc)
+  * [Dealing with Timeouts](samples/08-timeouts.cfc)
     * Success on timeout
     * Exception on timeout
-  * [Checking status](samples/11-statuschecks.cfc)
-  * [Combining Futures](samples/12-combine.cfc)
-    * Very much like a `reduce()` operation
-    * Remember this: 1-1 operation
-  * [Composing Futures](samples/13-compose.cfc)
-    * Monadic design pattern (https://medium.com/thg-tech-blog/monad-design-**pattern**-in-java-3391d4095b3f)
-    * Hmm: 2-1 Operation, future of futures!
+  * [Checking status](samples/09-statuschecks.cfc)
+  * Pipelines are independent of data
+  * Excercises
+    * @eric to complete
 
+### Dealing With Exceptions
+
+* [] Everybody has problems, our code has them too, sometimes...
+* [] Let's review the promises [data/error tracks](samples/04-cbfutures-stages.md)
+* [Dealing with Exceptions](samples/10-exceptions.cfc)
+* [] Built-in logging - [example](samples/10-exceptions-logging.cfc) @eric
+* [] `handle` methods - both results and exceptions - [example](samples/10-exceptions-handle.cfc) @eric
+* [] [Custom logging](samples/10-exceptions-custom-logging.cfc) @eric
+* [] Recovering with data - [example](samples/10-exceptions-recovery.cfc) @eric
+* Excercises
+  * @eric to complete
+
+### Executors - Be the Manager
+
+* [√] [Thread of execution](samples/11-nb-future.cfc)
+* [√] [Changing the pool](samples/12-custom-pool.cfc)
+  * [√] Register many different [types of executors/pool](samples/13-cached-pool.cfc)
+    * [] `Fixed` : Control the amount of threads, cpu intensive, io intensive
+    * [] `Single` : A processing queue FIFO
+    * [] `Cached` : Ever expanding demand queue
+    * [] `Scheduled` : Scheduled Tasks
+  * [] [Checking status reinforcements](samples/09-statuschecks.cfc)
+  * [] Shutdowns and awaiting terminations - [example](samples/14-shutdown-terminations.cfc) @eric
+  * [] Killing tasks? really? How?
+  * Excercises
+    * @eric to complete
+
+### Parallel Tasks
+
+* https://www.callicoder.com/java-8-completablefuture-tutorial/
+* [Combining Futures](samples/15-combine.cfc)
+  * Very much like a `reduce()` operations
+  * Remember this: 1-1 operation
+* [Composing Futures](samples/16-compose.cfc)
+  * Monadic design pattern (https://medium.com/thg-tech-blog/monad-design-**pattern**-in-java-3391d4095b3f)
+  * Hmm: 2-1 Operation, future of futures!
 * [] Working with multiple futures
-  * [Racing Futures](samples/14-anyOf.cfc)
-  * [All Futures](samples/15-all.cfc)
-  * [All futures Modified](samples/16-allapply.cfc)
+  * [Racing Futures](samples/17-anyOf.cfc)
+  * [All Futures](samples/18-all.cfc)
+  * [All futures Modified](samples/19-allapply.cfc)
+* Excercises
+  * @eric to complete
 
-* [] Extra Credit: Schedule Tasks!
-\
+### Futures in a ColdBox App
 
+* [] Let's got to server land
+* [] Worker MOnitor
+  * @eric to write
 
+### Scheduled Tasks
 
-* [√] [Thread of execution](samples/04-nb-future.cfc)
-  * [√] [Changing the pool](samples/05-custom-pool.cfc)
-    * [√] Register many different [types of executors/pool](samples/06-cached-pool.cfc)
-      * [] `Fixed` : Control the amount of threads, cpu intensive, io intensive
-      * [] `Single` : A processing queue FIFO
-      * [] `Cached` : Ever expanding demand queue
-      * [] `Scheduled` : Scheduled Tasks
+[] What is a scheduler executor
+[] Options in ColdBox
+[] ;;
