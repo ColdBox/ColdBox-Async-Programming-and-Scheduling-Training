@@ -1,7 +1,6 @@
 component {
 
-    asyncManager = new coldbox.system.async.AsyncManager();
-    ioBound = asyncManager.newExecutor( name : "ioBound", type: "cached" );
+    property name="asyncManager" inject="wirebox:asyncManager";
 
 	function compute(){
 		print.greenLine( "Computing from: #getThreadname()#" )
@@ -14,17 +13,20 @@ component {
 	}
 
 	function run() {
+		variables.ioBound = asyncManager.newExecutor( name : "ioBound", type: "cached" );
 
 		print.blueLine( "Starting from: #getThreadname()#" ).line();
-		
+
 		create().then( (data) => {
 			// Where is this executing now?
 			print.redLine( "Executing from: #getThreadname()#" )
 			print.greenLine( data )
-			//return data;
+			return data;
 		} )
 		// The Future Pipeline!
-		.thenRun( (data) => print.redLine( "Hello from runnable land!" ).toConsole() )
+		.thenRun( (data) => {
+			print.redLine( "Hello from runnable land!" ).toConsole();
+		} )
 		.then( (data) => print.greenLine( "All done: #data#" ).toConsole() )
 		.then( (data) => print.greenLine( "not really" ).toConsole() );
 		// Where is it going? NOWHERE!!!

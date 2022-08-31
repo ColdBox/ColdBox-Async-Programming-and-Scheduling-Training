@@ -1,9 +1,11 @@
 {
     "dependencies":{
-        "coldbox":"^6"
+        "coldbox":"^6.8.1+5",
+        "mockdatacfc":"^3.5.0+5"
     },
     "installPaths":{
-        "coldbox":"coldbox/"
+        "coldbox":"coldbox/",
+        "mockdatacfc":"modules/mockdatacfc/"
     },
     "scripts":{
         "run":"task run Run",

@@ -1,9 +1,12 @@
 component{
 
-    asyncManager = new coldbox.system.async.AsyncManager();
+    property name="asyncManager" inject="wirebox:asyncManager";
 
     function create( n ){
-        return asyncManager.newFuture( () => n );
+        return asyncManager.newFuture( () => {
+            sleep( randRange( 200, 1000 ) );
+            return n;
+        } );
     }
 
     function run(){
@@ -14,8 +17,7 @@ component{
         // If not, the result is a future and not the actual result
         .thenCompose( (data) => create( data & " World" ) )
         .thenRun( (result) => print.greenLine( result ) )
-        .get()
-
+        .get();
     }
 
 }

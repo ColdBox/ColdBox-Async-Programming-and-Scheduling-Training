@@ -1,7 +1,10 @@
 component{
 
-    asyncManager = new coldbox.system.async.AsyncManager();
-    taskManager = asyncManager.newScheduledExecutor( name: "myTasks", threads: 20 );
+    property name="asyncManager" inject="wirebox:asyncManager";
+
+    function init() {
+        variables.taskManager = asyncManager.newScheduledExecutor( name: "myTasks", threads: 20 );
+    }
 
     function run(){
 

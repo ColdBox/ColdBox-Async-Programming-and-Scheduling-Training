@@ -1,19 +1,21 @@
 component{
 
-    asyncManager = new coldbox.system.async.AsyncManager();
+    property name="asyncManager" inject="wirebox:asyncManager";
 
     function create( n ){
-        return asyncManager.newFuture( () => n );
+        return asyncManager.newFuture( () => {
+            sleep( randRange( 100, 2000 ) );
+            print.line( "creating new number: #n#" ).toConsole();
+            return n;
+        } );
     }
 
     function run(){
-
 		// Let's combine two async operations and when both arrive continue operation
-		create( 2 )
-			.thenCombine( create(3), (a,b) => a+b )
-			.thenRun( (result) => print.greenLine( result ) )
+		var future = create( 2 )
+			.thenCombine( create( 3 ), ( a, b ) => a + b );
 
-
+		print.greenLine( future.get() ).toConsole();
     }
 
 }

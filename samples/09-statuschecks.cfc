@@ -1,10 +1,12 @@
 component{
 
-	asyncManager = new coldbox.system.async.AsyncManager();
-	threadPool = asyncManager.newExecutor( "myThreads" );
+	property name="asyncManager" inject="wirebox:asyncManager";
 
-    function run(){
+	function init() {
+		variables.threadPool = asyncManager.newExecutor( "myThreads" );
+	}
 
+    function run() {
 		var future = asyncManager.newFuture(
 				() => {
 					while( true ){
@@ -18,27 +20,33 @@ component{
 
 		print.greenLine( "Siesta time..." )
 		sleep( 2000 );
-		
-		//print.blueLine( "done? " & future.isDone() )
-		//	.blueLine( "exception? " & future.isCompletedExceptionally() )
-		//	.blueLine( "cancel? " & future.isCancelled() )
-		//	.line()
-		//	.toConsole();
 
-		// print.greenLine( "Siesta time..." )
-		// sleep( 1000 );
+		print.blueLine( "done? " & future.isDone() )
+			.blueLine( "exception? " & future.isCompletedExceptionally() )
+			.blueLine( "cancel? " & future.isCancelled() )
+			.line()
+			.toConsole();
 
-		// future.cancel( true );
-		// print.blueLine( "done? " & future.isDone() )
-		// 	.blueLine( "exception? " & future.isCompletedExceptionally() )
-		// 	.blueLine( "cancel? " & future.isCancelled() )
-		// 	.toConsole();
-		
-		//print.blueLine( "Finished! #future.get()#" );
-		
+		print.greenLine( "Siesta time..." )
+		sleep( 1000 );
+
+		future.cancel( true );
+
+		print.blueLine( "done? " & future.isDone() )
+			.blueLine( "exception? " & future.isCompletedExceptionally() )
+			.blueLine( "cancel? " & future.isCancelled() )
+			.line()
+			.toConsole();
+
+		if ( future.isDone() && !future.isCompletedExceptionally() && !future.isCancelled() ) {
+			print.blueLine( "Finished! #future.get()#" ).line();
+		}
+
 		// Without this, sometimes you can have threads that never finish.
+		print.line( "Shutting down the thread pool" ).toConsole();
 		threadPool.shutdownNow();
-		
+		print.line( "Thread pool shut down" ).toConsole();
+
     }
 
 }

@@ -53,7 +53,7 @@ In this session, we will explore the concepts of asynchronous and parallel progr
         * [] Simplistic error handler with no way to recover or continue executing pipelines after an exception. Concept of two tracks is broken!
         * [] No way to choose or reuse the executor to run the sub-sequent `then()` operations.  Lucee actually creates a new `singleThreadExecutor()` for EVERY `then()` operation.
         * [] No way to operate on multiple futures at once
-          * TODO: Eric Example - [runAsync() example](samples/02-runAsync-limitations.cfc)
+          * [runAsync() example](samples/02-runAsync-limitations.cfc)
         * [] No way to combine/compose futures
         * [] Only works with closures, does not work on actually calling component methods
     * [] `xmap(), xeach()` parallel processing
@@ -109,10 +109,11 @@ In this session, we will explore the concepts of asynchronous and parallel progr
   * [] Creating the Future!!
     * [] [cbFutures Stages](samples/04-cbfutures-stages.md)
     * [] [Create a future](samples/05-creating-future.cfc)
-    * [] Excercises - @eric to complete
+    * [] Exercises - @eric to complete
       * Make a future that prints to the console
-      * Make a future that returns a message to print to the console after 2 seconds
-      * Something about timeout and default values….
+      * Make a future that returns a message to print to the console after 5 seconds
+        * Print that message using `future.get()`
+      * Make a future that returns a default value after 3 seconds.
         * CAVEAT, this does not stop the thread
       * Make a future that throws an exception and see what happens with `.get()`
       * Exam
@@ -132,7 +133,7 @@ In this session, we will explore the concepts of asynchronous and parallel progr
     * Exception on timeout
   * [Checking status](samples/09-statuschecks.cfc)
   * Pipelines are independent of data
-  * Excercises
+  * Exercises
     * @eric to complete
 
 ### Dealing With Exceptions
@@ -144,7 +145,7 @@ In this session, we will explore the concepts of asynchronous and parallel progr
 * [] `handle` methods - both results and exceptions - [example](samples/10-exceptions-handle.cfc) @eric
 * [] [Custom logging](samples/10-exceptions-custom-logging.cfc) @eric
 * [] Recovering with data - [example](samples/10-exceptions-recovery.cfc) @eric
-* Excercises
+* Exercises
   * @eric to complete
 
 ### Executors - Be the Manager
@@ -159,7 +160,7 @@ In this session, we will explore the concepts of asynchronous and parallel progr
   * [] [Checking status reinforcements](samples/09-statuschecks.cfc)
   * [] Shutdowns and awaiting terminations - [example](samples/14-shutdown-terminations.cfc) @eric
   * [] Killing tasks? really? How?
-  * Excercises
+  * Exercises
     * @eric to complete
 
 ### Parallel Tasks
@@ -175,7 +176,7 @@ In this session, we will explore the concepts of asynchronous and parallel progr
   * [Racing Futures](samples/17-anyOf.cfc)
   * [All Futures](samples/18-all.cfc)
   * [All futures Modified](samples/19-allapply.cfc)
-* Excercises
+* Exercises
   * @eric to complete
 
 ### Futures in a ColdBox App

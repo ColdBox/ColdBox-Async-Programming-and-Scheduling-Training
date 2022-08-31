@@ -1,9 +1,10 @@
 component {
 
-    asyncManager = new coldbox.system.async.AsyncManager();
+    property name="asyncManager" inject="wirebox:asyncManager";
 
 	function compute(){
-		print.greenLine( "Computing from: #getThreadname()#" )
+		print.greenLine( "Computing from: #getThreadname()#" ).toConsole();
+		print.line( "compute(): 2" ).line().toConsole();
 		return 2;
 	}
 
@@ -12,18 +13,34 @@ component {
 	}
 
 	function run() {
-		print.blueLine( "Starting from: #getThreadname()#" )
-		
+		print.line().boldWhiteOnYellowLine( "Press Ctrl-C to exit" ).line();
+		print.blueLine( "Starting from: #getThreadname()#" ).toConsole();
+
 		var future = create()
 			// Use then like a map() operation and work on the results
-			.then( (data) => data * 2 )
-			.then( (data) => data + 1 )
-			.then( (data) => print.boldGreenLine( "Final Result: " & data ) )
-			//.thenRun( (data) => print.boldGreenLine( "Final Result: " & data ) )
-			
-		//print.blueLine( "Future Result: #future.get()#" )
-		// Why did it blow up? Ahh remember the return statemetns
+			.then( (data) => {
+				print.greenLine( "Computing from: #getThreadname()#" ).toConsole();
+				print.line( "incoming: #data#" ).toConsole();
+				print.line( "outgoing: #data * 2#" ).line().toConsole();
+				return data * 2;
+			} )
+			.then( (data) => {
+				print.greenLine( "Computing from: #getThreadname()#" ).toConsole();
+				print.line( "incoming: #data#" ).toConsole();
+				print.line( "outgoing: #data + 1#" ).line().toConsole();
+				return data + 1;
+			} )
+			.then( (data) => {
+				print.greenLine( "Computing from: #getThreadname()#" ).toConsole();
+				print.boldGreenLine( "Final Result: " & data ).toConsole();
+			} );
 
+		while ( true ) {
+			if ( !isNull( checkInterrupted() ) ) {
+				return;
+			}
+			sleep( 100 );
+		}
 	}
 
 	function getThreadname(){
