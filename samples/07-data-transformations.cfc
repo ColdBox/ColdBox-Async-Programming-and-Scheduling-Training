@@ -1,4 +1,4 @@
-component extends="BaseTask" {
+component extends="../BaseTask" {
 
 	function run() {
 		print.line().boldWhiteOnYellowLine( "Press Ctrl-C to exit" ).line();

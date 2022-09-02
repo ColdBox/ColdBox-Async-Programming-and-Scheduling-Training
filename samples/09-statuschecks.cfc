@@ -1,4 +1,4 @@
-component extends="BaseTask" {
+component extends="../BaseTask" {
 
 	function init() {
 		variables.threadPool = asyncManager.newExecutor( "myThreads" );

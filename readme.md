@@ -85,7 +85,7 @@ In this session, we will explore the concepts of asynchronous and parallel progr
         * Logs become your best friend
         * ColdBox Debugger Panels: tracers and request profilers
       * Easy to spot an asynchronous developers...... They are in the corner, crying! 😭
-    * [] 🤢 We have threa approaches to threading which are extremely simplistic and not very powerful at all.
+    * [] 🤢 We have three approaches to threading which are extremely simplistic and not very powerful at all.
 
 ### Intro to ColdBox Futures
 
@@ -109,22 +109,14 @@ In this session, we will explore the concepts of asynchronous and parallel progr
   * [] Creating the Future!!
     * [] [cbFutures Stages](samples/04-cbfutures-stages.md)
     * [] [Create a future](samples/05-creating-future.cfc)
-    * [] Exercises - @eric to complete
-      * Make a future that prints to the console
-      * Make a future that returns a message to print to the console after 5 seconds
-        * Print that message using `future.get()`
-      * Make a future that returns a default value after 3 seconds.
-        * CAVEAT, this does not stop the thread
-      * Make a future that throws an exception and see what happens with `.get()`
-      * Exam
-        * Read 3 files asynchronously
-        * Print the output in order
-        * Print the output as soon as you can
+  * [] [Exercise 01](exercises/01-intro-to-futures.cfc)
+    * [Solution 01](solutions/01-intro-to-futures.cfc)
 
 ### Magical Pipelines
 
 * [] 🎩 [Magical Pipelines](samples/06-then.cfc)
   * [] Java API: `thenApply()`, `thenAccept()`, `thenRun()`, why?
+    * [![Java Pipeline Methods Explained](samples/21-java-completable-future-methods-explained.png)](http://codeflex.co/java-multithreading-completablefuture-explained/)
   * [] CF API: `then()` and `thenRun()` (Easier + Dynamic API)
     * [] Curiosity: `CompletableFutures` never end!  This is So Ironic! Sharknado! :shark:
   * [Data Transformations](samples/07-data-transformations.cfc)

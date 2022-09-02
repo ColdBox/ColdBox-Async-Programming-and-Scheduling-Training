@@ -13,7 +13,7 @@
  * Make sure to end with `.toConsole()` so your message is flushed
  * to the console the moment it is printed.
  */
-component extends="BaseExercise" {
+component extends="../BaseTask" {
 
     /**
      * Create a future that prints out a greeting immediately.

@@ -1,4 +1,4 @@
-component extends="BaseTask" {
+component extends="../BaseTask" {
 
 	function run() {
 		print.blueLine( "Starting from: #getThreadname()#" ).line();

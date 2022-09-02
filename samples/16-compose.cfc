@@ -1,4 +1,4 @@
-component extends="BaseTask" {
+component extends="../BaseTask" {
 
     function run() {
         // If you do a computation that returns another future, instead of returning a future, compose them

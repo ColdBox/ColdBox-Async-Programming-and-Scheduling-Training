@@ -1,4 +1,4 @@
-component extends="BaseTask" {
+component extends="../BaseTask" {
 
 	function compute(){
 		print.greenLine( "Computing from: #getThreadname()#" )

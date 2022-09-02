@@ -1,4 +1,4 @@
-component extends="BaseTask" {
+component extends="../BaseTask" {
 
 	function compute(){
 		//sleep( 1000 );

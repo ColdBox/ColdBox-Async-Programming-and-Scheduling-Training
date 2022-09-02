@@ -1,9 +1,11 @@
 {
     "dependencies":{
+        "BCrypt":"^3.0.1+34",
         "coldbox":"^6.8.1+5",
         "mockdatacfc":"^3.5.0+5"
     },
     "installPaths":{
+        "BCrypt":"modules/BCrypt/",
         "coldbox":"coldbox/",
         "mockdatacfc":"modules/mockdatacfc/"
     },

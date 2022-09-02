@@ -1,4 +1,4 @@
-component extends="BaseTask" {
+component extends="../BaseTask" {
 
     function getFeedData( feed ){
         print.redLine( ">> Thread: #getThreadName()# ").toConsole();

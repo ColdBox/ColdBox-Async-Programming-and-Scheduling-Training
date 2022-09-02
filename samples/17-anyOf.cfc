@@ -1,4 +1,4 @@
-component extends="BaseTask" {
+component extends="../BaseTask" {
 
     function dns1() {
         sleep( randRange( 200, 700 ) );

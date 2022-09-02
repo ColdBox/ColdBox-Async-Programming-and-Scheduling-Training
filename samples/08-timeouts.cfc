@@ -1,4 +1,4 @@
-component extends="BaseTask" {
+component extends="../BaseTask" {
 
     function run(){
 		var future = asyncManager.newFuture()
