@@ -1,6 +1,4 @@
-component {
-
-	property name="asyncManager" inject="wirebox:asyncManager";
+component extends="BaseTask" {
 
 	function compute(){
 		//sleep( 1000 );

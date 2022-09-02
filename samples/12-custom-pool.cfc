@@ -1,8 +1,7 @@
-component {
-
-	property name="asyncManager" inject="wirebox:asyncManager";
+component extends="BaseTask" {
 
 	function init() {
+		super.init();
 		variables.ioBound = asyncManager.newExecutor( name : "ioBound", threads: 10 );
 	}
 

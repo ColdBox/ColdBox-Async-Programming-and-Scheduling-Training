@@ -1,22 +1,10 @@
-component {
-
-    property name="asyncManager" inject="wirebox:asyncManager";
-
-	function compute(){
-		print.greenLine( "Computing from: #getThreadname()#" ).toConsole();
-		print.line( "compute(): 2" ).line().toConsole();
-		return 2;
-	}
-
-	function create(){
-		return asyncManager.newFuture( () => compute() )
-	}
+component extends="BaseTask" {
 
 	function run() {
 		print.line().boldWhiteOnYellowLine( "Press Ctrl-C to exit" ).line();
 		print.blueLine( "Starting from: #getThreadname()#" ).toConsole();
 
-		var future = create()
+		var future = asyncManager.newFuture( () => compute( 2 ) )
 			// Use then like a map() operation and work on the results
 			.then( (data) => {
 				print.greenLine( "Computing from: #getThreadname()#" ).toConsole();
@@ -41,10 +29,6 @@ component {
 			}
 			sleep( 100 );
 		}
-	}
-
-	function getThreadname(){
-		return createObject( "java", "java.lang.Thread" ).currentThread().getName();
 	}
 
 }

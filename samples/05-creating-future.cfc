@@ -1,6 +1,4 @@
-component {
-
-	property name="asyncManager" inject="wirebox:asyncManager";
+component extends="BaseTask" {
 
 	function compute(){
 		sleep( 3000 )
@@ -33,10 +31,6 @@ component {
 		// 4. What happens if the computation is taking too long? and we add a timeout?
 		// 5. But why a nasty exception, let use a default value now, woot woot!
 		// 6. There is also a getNow() which is get whatever you have NOW or return a default value! It's like `timeout:0`
-	}
-
-	function getThreadname(){
-		return createObject( "java", "java.lang.Thread" ).currentThread().getName();
 	}
 
 }

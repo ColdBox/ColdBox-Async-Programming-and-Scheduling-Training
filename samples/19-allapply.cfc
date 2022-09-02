@@ -1,8 +1,7 @@
-component{
-
-    property name="asyncManager" inject="wirebox:asyncManager";
+component extends="BaseTask" {
 
     function init() {
+        super.init();
         loadModule( shell.pwd() & "modules/mockdatacfc" );
         variables.mock = getInstance( "MockData@mockdatacfc" );
     }
@@ -32,7 +31,7 @@ component{
         asyncManager.allApply( aObjects, ( item ) => item.getMemento() )
             // .thenRun( ( result ) => print.line( "does this work?" ).toConsole() )
             // .allApply( data, ( item ) => item.getMemento(), asyncManager.$executors.newFixedThreadPool( 50 ) )
-            // .each( (item) => print.blueLine( item.toString() ),toConsole() )
+            .each( (item) => print.blueLine( item.toString() ).toConsole() )
 
 
         // 1. Now let's use a custom executor

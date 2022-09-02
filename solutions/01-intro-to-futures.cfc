@@ -1,4 +1,8 @@
 /**
+ * =================================================================================
+ * THIS IS THE SOLUTION FILE. TO WORK ON THE EXERCISES GO TO THE `exercises` FOLDER.
+ * =================================================================================
+ *
  * This exercise goes over:
  *     + creating new Futures
  *     + running Futures
@@ -19,14 +23,19 @@ component extends="BaseExercise" {
      * Create a future that prints out a greeting immediately.
      */
     function partOne() {
-        return;
+        asyncManager.newFuture( () => {
+            print.line( "Hi!" ).toConsole();
+        } );
     }
 
     /**
      * Create a future that prints out a greeting after 2 seconds.
      */
     function partTwo() {
-        return;
+        asyncManager.newFuture( () => {
+            sleep( 2000 );
+            print.line( "Hi again!" ).toConsole();
+        } );
     }
 
     /**
@@ -34,7 +43,11 @@ component extends="BaseExercise" {
      * Print out that message on the main thread.
      */
     function partThree() {
-        return;
+        var future = asyncManager.newFuture( () => {
+            sleep( 5000 );
+            return "Please wait for my greeting.";
+        } );
+        print.line( future.get() ).toConsole();
     }
 
     /**
@@ -43,7 +56,14 @@ component extends="BaseExercise" {
      * Print out that message on the main thread.
      */
     function partFour() {
-        return;
+        var future = asyncManager.newFuture( () => {
+            sleep( 5000 );
+            return "Please wait for my greeting.";
+        } );
+
+        print.line(
+            future.get( timeout = 3000, defaultValue = "Nevermind....Goodbye." )
+        ).toConsole();
     }
 
     /**
@@ -54,7 +74,16 @@ component extends="BaseExercise" {
      *     - when you wait for the future to complete?
      */
     function partFive() {
-        return;
+        var future = asyncManager.newFuture( () => {
+            sleep( 5000 );
+            return "Please wait for my greeting.";
+        } );
+
+        try {
+            future.get( timeout = 3000 );
+        } catch ( any e ) {
+            print.redLine( "Whoops! We ran in to a timeout here." ).toConsole();
+        }
     }
 
     function run() {

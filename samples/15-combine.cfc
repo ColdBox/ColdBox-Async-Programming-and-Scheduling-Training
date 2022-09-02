@@ -1,6 +1,4 @@
-component{
-
-    property name="asyncManager" inject="wirebox:asyncManager";
+component extends="BaseTask" {
 
     function create( n ){
         return asyncManager.newFuture( () => {
