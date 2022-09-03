@@ -132,7 +132,7 @@ In this session, we will explore the concepts of asynchronous and parallel progr
 
 * [] Everybody has problems, our code has them too, sometimes...
 * [] Let's review the promises [data/error tracks](samples/04-cbfutures-stages.md)
-* [Dealing with Exceptions](samples/10-exceptions.cfc)
+* [] [Dealing with Exceptions](samples/10-exceptions.cfc)
 * [] Built-in logging - [example](samples/10-exceptions-logging.cfc) @eric
 * [] `handle` methods - both results and exceptions - [example](samples/10-exceptions-handle.cfc) @eric
 * [] [Custom logging](samples/10-exceptions-custom-logging.cfc) @eric
