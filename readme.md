@@ -168,8 +168,8 @@ In this session, we will explore the concepts of asynchronous and parallel progr
   * [Racing Futures](samples/17-anyOf.cfc)
   * [All Futures](samples/18-all.cfc)
   * [All futures Modified](samples/19-allapply.cfc)
-* Exercises
-  * @eric to complete
+* [] [Exercise 05](exercises/05-parallel-tasks.cfc)
+  * [Solution 05](solutions/05-parallel-tasks.cfc)
 
 ### Futures in a ColdBox App
 
