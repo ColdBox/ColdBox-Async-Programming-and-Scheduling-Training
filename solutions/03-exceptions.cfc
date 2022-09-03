@@ -99,7 +99,7 @@ component extends="../BaseTask" {
     }
 
     function run() {
-        print.blueLine( "Running all `02-pipelines-and-statuses` exercises" ).toConsole();
+        print.blueLine( "Running all `03-exceptions` exercises" ).toConsole();
 
         print.line().line( "Part One" ).toConsole();
         partOne().get();

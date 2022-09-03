@@ -125,8 +125,8 @@ In this session, we will explore the concepts of asynchronous and parallel progr
     * Exception on timeout
   * [Checking status](samples/09-statuschecks.cfc)
   * Pipelines are independent of data
-  * Exercises
-    * @eric to complete
+  * [] [Exercise 02](exercises/02-pipelines-and-statuses.cfc)
+    * [Solution 02](solutions/02-pipelines-and-statuses.cfc)
 
 ### Dealing With Exceptions
 
@@ -137,8 +137,8 @@ In this session, we will explore the concepts of asynchronous and parallel progr
 * [] `handle` methods - both results and exceptions - [example](samples/10-exceptions-handle.cfc) @eric
 * [] [Custom logging](samples/10-exceptions-custom-logging.cfc) @eric
 * [] Recovering with data - [example](samples/10-exceptions-recovery.cfc) @eric
-* Exercises
-  * @eric to complete
+* [] [Exercise 03](exercises/03-exceptions.cfc)
+  * [Solution 03](solutions/03-exceptions.cfc)
 
 ### Executors - Be the Manager
 
@@ -152,8 +152,8 @@ In this session, we will explore the concepts of asynchronous and parallel progr
   * [] [Checking status reinforcements](samples/09-statuschecks.cfc)
   * [] Shutdowns and awaiting terminations - [example](samples/14-shutdown-terminations.cfc) @eric
   * [] Killing tasks? really? How?
-  * Exercises
-    * @eric to complete
+  * [] [Exercise 04](exercises/04-executors.cfc)
+    * [Solution 04](solutions/04-executors.cfc)
 
 ### Parallel Tasks
 
