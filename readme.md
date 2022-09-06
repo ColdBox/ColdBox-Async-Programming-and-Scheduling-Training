@@ -199,3 +199,11 @@ In this session, we will explore the concepts of asynchronous and parallel progr
 [] What is a scheduler executor
 [] Options in ColdBox
 [] ;;
+
+### Tips
+
+To NOT show full stacktraces on exceptions, then run this in CommandBox
+
+```bash
+config set showVerboseErrors=false
+```
