@@ -12,11 +12,14 @@ In this session, we will explore the concepts of asynchronous and parallel progr
 ## 📅 Agenda
 
 ### Introduction
-Eric
+
+> Eric
+
 * Intros, Get to know you, What do you want from the workshop?
   * Async Joke? (something dumb)
 
-Luis
+> Luis
+
 * [] The NB (non-blocking) movement
   * [] Has made NodeJS shine, but other languages support this as well.
   * [] Movement to more async/parallel computations
@@ -93,7 +96,8 @@ Luis
 
 ### Intro to ColdBox Futures
 
-Eric
+> Eric
+
 * [] ColdBox Futures are similar to JavaScript Promises but backed by the Java API of `CompletableFuture`
   * [] JDK 8 Introduced `CompletableFutures`, `CompletionStages`, Executors, Lambdas and much more.
   * [] 🦄 Java `CompletableFutures` are like JavaScript Promises, but you know Java devs, over complicate things, even names!
@@ -118,7 +122,8 @@ Eric
     * [Solution 01](solutions/01-intro-to-futures.cfc)
 
 ### Magical Pipelines
-Luis
+
+> Luis
 
 * [] 🎩 [Magical Pipelines](samples/06-then.cfc)
   * [] Java API: `thenApply()`, `thenAccept()`, `thenRun()`, why?
@@ -135,7 +140,8 @@ Luis
     * [Solution 02](solutions/02-pipelines-and-statuses.cfc)
 
 ### Dealing With Exceptions
-Eric
+
+> Eric
 
 * Another dumb Async Joke
 * [] Everybody has problems, our code has them too, sometimes...
@@ -149,7 +155,8 @@ Eric
   * [Solution 03](solutions/03-exceptions.cfc)
 
 ### Executors - Be the Manager
-Luis
+
+> Luis
 
 * [] [Thread of execution](samples/11-nb-future.cfc)
 * [] [Changing the pool](samples/12-custom-pool.cfc)
@@ -165,7 +172,8 @@ Luis
     * [Solution 04](solutions/04-executors.cfc)
 
 ### Parallel Tasks
-Eric
+
+> Eric
 
 * https://www.callicoder.com/java-8-completablefuture-tutorial/
 * [Combining Futures](samples/15-combine.cfc)
@@ -183,7 +191,8 @@ Eric
 
 
 ### Q&A
-Eric & Luis
+
+> Eric & Luis
 
 ### Scheduled Tasks
 
