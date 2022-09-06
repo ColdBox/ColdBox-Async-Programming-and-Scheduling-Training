@@ -10,7 +10,7 @@ component extends="../BaseTask" {
 
 		print.blueLine( "Starting from: #getThreadname()#" )
 
-		var future = asyncManager.newFuture( () => compute() )
+		var future = asyncManager.newFuture( () => compute( 2 ) )
 			.then( (data) => {
 				// Where is this executing? same thread?
 				// Think about it, we want a non-blocking mode.

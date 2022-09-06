@@ -12,7 +12,11 @@ In this session, we will explore the concepts of asynchronous and parallel progr
 ## 📅 Agenda
 
 ### Introduction
+Eric
+* Intros, Get to know you, What do you want from the workshop?
+  * Async Joke? (something dumb)
 
+Luis
 * [] The NB (non-blocking) movement
   * [] Has made NodeJS shine, but other languages support this as well.
   * [] Movement to more async/parallel computations
@@ -89,6 +93,7 @@ In this session, we will explore the concepts of asynchronous and parallel progr
 
 ### Intro to ColdBox Futures
 
+Eric
 * [] ColdBox Futures are similar to JavaScript Promises but backed by the Java API of `CompletableFuture`
   * [] JDK 8 Introduced `CompletableFutures`, `CompletionStages`, Executors, Lambdas and much more.
   * [] 🦄 Java `CompletableFutures` are like JavaScript Promises, but you know Java devs, over complicate things, even names!
@@ -113,6 +118,7 @@ In this session, we will explore the concepts of asynchronous and parallel progr
     * [Solution 01](solutions/01-intro-to-futures.cfc)
 
 ### Magical Pipelines
+Luis
 
 * [] 🎩 [Magical Pipelines](samples/06-then.cfc)
   * [] Java API: `thenApply()`, `thenAccept()`, `thenRun()`, why?
@@ -129,7 +135,9 @@ In this session, we will explore the concepts of asynchronous and parallel progr
     * [Solution 02](solutions/02-pipelines-and-statuses.cfc)
 
 ### Dealing With Exceptions
+Eric
 
+* Another dumb Async Joke
 * [] Everybody has problems, our code has them too, sometimes...
 * [] Let's review the promises [data/error tracks](samples/04-cbfutures-stages.md)
 * [] [Dealing with Exceptions](samples/10-exceptions.cfc)
@@ -141,10 +149,11 @@ In this session, we will explore the concepts of asynchronous and parallel progr
   * [Solution 03](solutions/03-exceptions.cfc)
 
 ### Executors - Be the Manager
+Luis
 
-* [√] [Thread of execution](samples/11-nb-future.cfc)
-* [√] [Changing the pool](samples/12-custom-pool.cfc)
-  * [√] Register many different [types of executors/pool](samples/13-cached-pool.cfc)
+* [] [Thread of execution](samples/11-nb-future.cfc)
+* [] [Changing the pool](samples/12-custom-pool.cfc)
+  * [] Register many different [types of executors/pool](samples/13-cached-pool.cfc)
     * [] `Fixed` : Control the amount of threads, cpu intensive, io intensive
     * [] `Single` : A processing queue FIFO
     * [] `Cached` : Ever expanding demand queue
@@ -156,6 +165,7 @@ In this session, we will explore the concepts of asynchronous and parallel progr
     * [Solution 04](solutions/04-executors.cfc)
 
 ### Parallel Tasks
+Eric
 
 * https://www.callicoder.com/java-8-completablefuture-tutorial/
 * [Combining Futures](samples/15-combine.cfc)
@@ -171,11 +181,9 @@ In this session, we will explore the concepts of asynchronous and parallel progr
 * [] [Exercise 05](exercises/05-parallel-tasks.cfc)
   * [Solution 05](solutions/05-parallel-tasks.cfc)
 
-### Futures in a ColdBox App
 
-* [] Let's got to server land
-* [] Worker MOnitor
-  * @eric to write
+### Q&A
+Eric & Luis
 
 ### Scheduled Tasks
 
