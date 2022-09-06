@@ -21,7 +21,11 @@ component extends="../BaseTask" {
 			.then( (data) => {
 				print.greenLine( "Computing from: #getThreadname()#" ).toConsole();
 				print.boldGreenLine( "Final Result: " & data ).toConsole();
-			} );
+			} )
+            //.thenRun( (data) => print.boldGreenLine( "Final Result: " & data ) )
+
+        //print.blueLine( "Future Result: #future.get()#" )
+		// Why did it blow up? Ahh remember the return statemetns
 
 		while ( true ) {
 			if ( !isNull( checkInterrupted() ) ) {
