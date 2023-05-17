@@ -155,31 +155,31 @@ In this session, we will explore the concepts of asynchronous and parallel progr
 
 > Brad
 
-- [] Everybody has problems, our code has them too, sometimes...
+- [] 😭 Everybody has problems, our code has them too, sometimes...
   - Let's review the promises [data/error tracks](samples/04-cbfutures-stages.md)
-- [] [Dealing with Exceptions](samples/10-exceptions.cfc)
-- [] Built-in logging - [example](samples/10-exceptions-logging.cfc) @Brad
-- [] `handle` methods - both results and exceptions - [example](samples/10-exceptions-handle.cfc) @Brad
+- [] ❤️‍🩹 [Dealing with Exceptions](samples/10-exceptions.cfc)
+- [] 🗄️ Built-in logging - [example](samples/10-exceptions-logging.cfc) @Brad
+  - [] `handle` methods - both results and exceptions - [example](samples/10-exceptions-handle.cfc) @Brad
 - [] [Custom logging](samples/10-exceptions-custom-logging.cfc) @Brad
-- [] Recovering with data - [example](samples/10-exceptions-recovery.cfc) @Brad
-- [] [Exercise 03](exercises/03-exceptions.cfc)
+- [] 🏥 Recovering with data - [example](samples/10-exceptions-recovery.cfc) @Brad
+- [] 💪 [Exercise 03](exercises/03-exceptions.cfc)
   - [Solution 03](solutions/03-exceptions.cfc)
 
 ### Executors - Be the Manager
 
 > Luis
 
-- [] [Thread of execution](samples/11-nb-future.cfc)
-- [] [Changing the pool](samples/12-custom-pool.cfc)
+- [] ⚡️ [Thread of execution](samples/11-nb-future.cfc)
+- [] 🏊‍♂️ [Changing the pool](samples/12-custom-pool.cfc)
   - [] Register many different [types of executors/pool](samples/13-cached-pool.cfc)
     - [] `Fixed` : Control the amount of threads, cpu intensive, io intensive
     - [] `Single` : A processing queue FIFO
     - [] `Cached` : Ever expanding demand queue
     - [] `Scheduled` : Scheduled Tasks
   - [] [Checking status reinforcements](samples/09-statuschecks.cfc)
-  - [] Shutdowns and awaiting terminations - [example](samples/14-shutdown-terminations.cfc) @Brad
-  - [] Killing tasks? really? How?
-  - [] [Exercise 04](exercises/04-executors.cfc)
+  - 🔌 [] Shutdowns and awaiting terminations - [example](samples/14-shutdown-terminations.cfc) @Brad
+  - ☠️ [] Killing tasks? really? How?
+  - [] 💪 [Exercise 04](exercises/04-executors.cfc)
     - [Solution 04](solutions/04-executors.cfc)
 
 ### Parallel Tasks
