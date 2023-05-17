@@ -130,7 +130,7 @@ In this session, we will explore the concepts of asynchronous and parallel progr
     - [Exercise 01](exercises/01-intro-to-futures.cfc)
     - [Solution 01](solutions/01-intro-to-futures.cfc)
 
-### Magical Pipelines
+### 🎩 Magical Pipelines 🐇
 
 > Luis
 
