@@ -23,8 +23,4 @@ component extends="../BaseTask" {
 		sleep( 2000 );
 	}
 
-	function getThreadname(){
-		return createObject( "java", "java.lang.Thread" ).currentThread().getName();
-	}
-
 }

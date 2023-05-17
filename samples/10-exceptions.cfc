@@ -54,8 +54,4 @@ component extends="../BaseTask" {
 		// 5. You can also use the handle() function
 	}
 
-	function getThreadname(){
-		return createObject( "java", "java.lang.Thread" ).currentThread().getName();
-	}
-
 }
