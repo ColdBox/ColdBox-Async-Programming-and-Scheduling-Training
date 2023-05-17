@@ -1,6 +1,6 @@
 # Async Programming and Scheduling 🚀🚀🚀
 
-> by Brad Peterson & Luis Majano - Ortus Solutions
+> by Brad Wood & Luis Majano - Ortus Solutions
 
 In this session, we will explore the concepts of asynchronous and parallel programming with the ColdBox Async Manager and Java’s Completable Futures APIs.  We will explore the concept of async computations, async pipelines, exception handling, scheduling and so much more. Pain 💊 medication is not included.
 
