@@ -120,11 +120,11 @@ In this session, we will explore the concepts of asynchronous and parallel progr
       - Create Futures
       - Create/Manage Executors
       - Create/Manage Schedule Tasks
-    - [] Intro to Executors
+    - [] Intro to Executors ⚡️⚡️⚡️
       - What is an executor
-      - Default Executor is the Fork Join Pool
+      - Default Executor is the Fork Join Pool ⑂⟕
       - We can customize it and create new ones as well
-  - [] Creating the Future!!
+  - [] Creating the Future!! 🚀🚀🚀
     - [] [cbFutures Stages](samples/04-cbfutures-stages.md)
     - [] [Create a future](samples/05-creating-future.cfc)
     - [Exercise 01](exercises/01-intro-to-futures.cfc)
