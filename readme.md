@@ -112,7 +112,10 @@ In this session, we will explore the concepts of asynchronous and parallel progr
   - Adapted for our dynamic language => many enhancements
   - [] `AsyncManager` class in charge of all async capabilities
     - **Standalone**: create an instance as a singleton
-    - **ColdBox**: `async()` or `inject:AsyncManager@coldbox` or `Async@coreDelegates`
+    - **ColdBox**:
+      - `async()` in handlers/layouts/views/interceptors
+      - `AsyncManager@coldbox` or `wirebox:asyncManager`
+      - `Async@coreDelegates`
     - **Functions**:
       - Create Futures
       - Create/Manage Executors
