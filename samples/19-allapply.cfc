@@ -22,10 +22,7 @@ component extends="../BaseTask" {
 	function run(){
 		// Build objects async
 		var aObjects = asyncManager.allApply(
-			[].append(
-				asyncManager.arrayRange( "1..200" ),
-				true
-			),
+			asyncManager.arrayRange( "1..200" ),
 			( item ) => getObject()
 		);
 

@@ -36,7 +36,7 @@ component extends="../BaseTask" {
 
 		var future = asyncManager.anyOf( feeds );
 
-		print.blueLine( "The winner is: #future.get().title#" ).toConsole();
+		print.blueLine( "The winner is: #future.get().title.toString()#" ).toConsole();
 		print.blueLine( "Race is over!" );
 	}
 
