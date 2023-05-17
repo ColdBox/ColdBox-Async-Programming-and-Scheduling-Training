@@ -1,7 +1,7 @@
 component {
 
 	function init(){
-		fileSystemUtil.createMapping( "/coldbox", getCwd() & "coldbox" );
+		fileSystemUtil.createMapping( "/coldbox", resolvePath( "coldbox" ) );
 		variables.asyncManager = new coldbox.system.async.AsyncManager();
 	}
 

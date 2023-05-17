@@ -134,7 +134,7 @@ component extends="../BaseTask" {
 
 	function init(){
 		super.init();
-		loadModule( shell.pwd() & "modules/bCrypt" );
+		loadModule( "../modules/bCrypt" );
 	}
 
 }
