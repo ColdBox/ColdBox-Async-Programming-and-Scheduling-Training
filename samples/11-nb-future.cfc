@@ -1,12 +1,12 @@
 component extends="../BaseTask" {
 
 	function compute(){
-		// sleep( 1000 );
+		sleep( 1000 );
 		print.greenLine( "Computing from: #getThreadname()#" ).toConsole();
 		return 2;
 	}
 
-	function create(){
+	Future function create(){
 		return asyncManager.newFuture( () => compute() )
 	}
 
@@ -14,9 +14,10 @@ component extends="../BaseTask" {
 		print.blueLine( "Starting from: #getThreadname()#" ).toConsole();
 
 		create().thenRun( ( data ) => {
+            sleep( 1000 );
 			// Where is this executing? same thread?
 			// Think about it, we want a non-blocking mode.
-			print.redLine( "Executing from: #getThreadname()#" ).toConsole();
+			print.redLine( "Then Executed From: #getThreadname()#" ).toConsole();
 			print.redLine( data ).toConsole();
 		} );
 

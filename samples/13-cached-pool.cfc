@@ -5,15 +5,9 @@ component extends="../BaseTask" {
 		variables.ioBound = asyncManager.newExecutor( name: "ioBound", type: "cached" );
 	}
 
-	function compute(){
-		sleep( 1000 );
-		print.blueLine( "Computing from: #getThreadname()#" ).toConsole();
-		return 2;
-	}
-
 	function create(){
 		// Where is this executing now?
-		return asyncManager.newFuture( () => compute(), ioBound )
+		return asyncManager.newFuture( () => compute( 33 ), ioBound )
 	}
 
 	function run(){
