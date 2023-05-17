@@ -176,7 +176,7 @@ In this session, we will explore the concepts of asynchronous and parallel progr
     - [] `Single` : A processing queue FIFO
     - [] `Cached` : Ever expanding demand queue
     - [] `Scheduled` : Scheduled Tasks
-  - [] [Checking status reinforcements](samples/09-statuschecks.cfc)
+  - [] 🔋 [Checking status reinforcements](samples/09-statuschecks.cfc)
   - 🔌 [] Shutdowns and awaiting terminations - [example](samples/14-shutdown-terminations.cfc)
   - ☠️ [] Killing tasks? really? How?
   - [] 💪 [Exercise 04](exercises/04-executors.cfc)
