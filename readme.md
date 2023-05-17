@@ -158,10 +158,10 @@ In this session, we will explore the concepts of asynchronous and parallel progr
 - [] 😭 Everybody has problems, our code has them too, sometimes...
   - Let's review the promises [data/error tracks](samples/04-cbfutures-stages.md)
 - [] ❤️‍🩹 [Dealing with Exceptions](samples/10-exceptions.cfc)
-- [] 🗄️ Built-in logging - [example](samples/10-exceptions-logging.cfc) @Brad
-  - [] `handle` methods - both results and exceptions - [example](samples/10-exceptions-handle.cfc) @Brad
-- [] [Custom logging](samples/10-exceptions-custom-logging.cfc) @Brad
-- [] 🏥 Recovering with data - [example](samples/10-exceptions-recovery.cfc) @Brad
+- [] 🗄️ Built-in logging - [example](samples/10-exceptions-logging.cfc)
+  - [] `handle` methods - both results and exceptions - [example](samples/10-exceptions-handle.cfc)
+- [] [Custom logging](samples/10-exceptions-custom-logging.cfc)
+- [] 🏥 Recovering with data - [example](samples/10-exceptions-recovery.cfc)
 - [] 💪 [Exercise 03](exercises/03-exceptions.cfc)
   - [Solution 03](solutions/03-exceptions.cfc)
 
@@ -177,7 +177,7 @@ In this session, we will explore the concepts of asynchronous and parallel progr
     - [] `Cached` : Ever expanding demand queue
     - [] `Scheduled` : Scheduled Tasks
   - [] [Checking status reinforcements](samples/09-statuschecks.cfc)
-  - 🔌 [] Shutdowns and awaiting terminations - [example](samples/14-shutdown-terminations.cfc) @Brad
+  - 🔌 [] Shutdowns and awaiting terminations - [example](samples/14-shutdown-terminations.cfc)
   - ☠️ [] Killing tasks? really? How?
   - [] 💪 [Exercise 04](exercises/04-executors.cfc)
     - [Solution 04](solutions/04-executors.cfc)
