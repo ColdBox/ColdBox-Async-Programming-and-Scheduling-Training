@@ -1,7 +1,7 @@
 /**
  * This exercise goes over:
  *     + Catching exceptions the traditional way
- *     + Catching exceptions asynchronously
+ *     + Catching exceptions in asynchronous code
  *     + Recovering from exceptions
  *     + Built in LogBox logging
  *     + Handling both results and errors in the same callback
@@ -28,8 +28,8 @@ component extends="../BaseTask" {
 
 	/**
 	 * Create a future that throws an exception.
-	 * Catch this exception asynchronously.
-	 * Log a friendly error message to the console asynchronously.
+	 * Catch this exception.
+	 * Log a friendly error message to the console.
 	 *
 	 * Question: What is the exception type in the asynchronous `catch`?
 	 */
@@ -39,8 +39,8 @@ component extends="../BaseTask" {
 
 	/**
 	 * Create a future that may throw an exception using the `fakeAjax` helper.
-	 * Catch this exception asynchronously. Return the a default quote of your choosing from this step.
-	 * Output the value of the pipeline to the console asynchronously.
+	 * Catch this exception. Return the a default quote of your choosing from this step.
+	 * Output the value of the pipeline to the console.
 	 */
 	function partThree(){
 		return;
@@ -51,7 +51,7 @@ component extends="../BaseTask" {
 	 * Handle both the error case and the success case at the same time.
 	 * In the error case, use a default quote of your choosing.
 	 * In the success case, use the passed in quote.
-	 * Output the quote to the console asynchronously.
+	 * Output the quote to the console.
 	 */
 	function partFour(){
 		return;
@@ -59,10 +59,10 @@ component extends="../BaseTask" {
 
 	/**
 	 * Create a future that may throw an exception using the `fakeAjax` helper.
-	 * Catch this exception asynchronously. Return the a default quote of your choosing from this step.
-	 * Process the quote value asynchronously by passing it to `flakyAnalyticsRequest`.
-	 * Catch this execption asynchronously. Return the current quote value.
-	 * Output the value of the pipeline to the console asynchronously.
+	 * Catch this exception. Return the a default quote of your choosing from this step.
+	 * Process the quote value by passing it to `flakyAnalyticsRequest`.
+	 * Catch this exception. Return the current quote value.
+	 * Output the value of the pipeline to the console.
 	 */
 	function partFive(){
 		return;
