@@ -113,7 +113,7 @@ In this session, we will explore the concepts of asynchronous and parallel progr
   - [] `AsyncManager` class in charge of all async capabilities
     - **Standalone**: create an instance as a singleton
     - **ColdBox**:
-      - `async()` in handlers/layouts/views/interceptors
+      - `async()` helper in handlers/layouts/views/interceptors
       - `AsyncManager@coldbox` or `wirebox:asyncManager`
       - `Async@coreDelegates`
     - **Functions**:
