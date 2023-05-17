@@ -71,9 +71,6 @@ component extends="../BaseTask" {
 		partFive();
 
 		while ( true ) {
-			if ( !isNull( checkInterrupted() ) ) {
-				return;
-			}
 			sleep( 100 );
 		}
 	}
