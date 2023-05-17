@@ -1,11 +1,11 @@
 # Async Programming and Scheduling 🚀🚀🚀
 
-> by Eric Peterson & Luis Majano - Ortus Solutions
+> by Brad Peterson & Luis Majano - Ortus Solutions
 
 In this session, we will explore the concepts of asynchronous and parallel programming with the ColdBox Async Manager and Java’s Completable Futures APIs.  We will explore the concept of async computations, async pipelines, exception handling, scheduling and so much more. Pain 💊 medication is not included.
 
-* 📧 **Email**: lmajano@ortussolutions.com, eric@ortussolutions.com
-* 🐦 **Twitter**: [@lmajano](https://twitter.com/lmajano) [@_elpete](https://twitter.com/_elpete) [@ortussolutions](https://twitter.com/ortussolutions)
+* 📧 **Email**: lmajano@ortussolutions.com, brad@ortussolutions.com
+* 🐦 **Twitter**: [@lmajano](https://twitter.com/lmajano) [@bdw429s](https://twitter.com/bdw429s) [@ortussolutions](https://twitter.com/ortussolutions)
 * 🔗 **Site**: https://www.ortussolutions.com
 
 
@@ -13,10 +13,9 @@ In this session, we will explore the concepts of asynchronous and parallel progr
 
 ### Introduction
 
-> Eric
+> Brad
 
 * Intros, Get to know you, What do you want from the workshop?
-  * Async Joke? (something dumb)
 
 > Luis
 
@@ -96,7 +95,7 @@ In this session, we will explore the concepts of asynchronous and parallel progr
 
 ### Intro to ColdBox Futures
 
-> Eric
+> Brad
 
 * [] ColdBox Futures are similar to JavaScript Promises but backed by the Java API of `CompletableFuture`
   * [] JDK 8 Introduced `CompletableFutures`, `CompletionStages`, Executors, Lambdas and much more.
@@ -141,16 +140,15 @@ In this session, we will explore the concepts of asynchronous and parallel progr
 
 ### Dealing With Exceptions
 
-> Eric
+> Brad
 
-* Another dumb Async Joke
 * [] Everybody has problems, our code has them too, sometimes...
 * [] Let's review the promises [data/error tracks](samples/04-cbfutures-stages.md)
 * [] [Dealing with Exceptions](samples/10-exceptions.cfc)
-* [] Built-in logging - [example](samples/10-exceptions-logging.cfc) @eric
-* [] `handle` methods - both results and exceptions - [example](samples/10-exceptions-handle.cfc) @eric
-* [] [Custom logging](samples/10-exceptions-custom-logging.cfc) @eric
-* [] Recovering with data - [example](samples/10-exceptions-recovery.cfc) @eric
+* [] Built-in logging - [example](samples/10-exceptions-logging.cfc) @Brad
+* [] `handle` methods - both results and exceptions - [example](samples/10-exceptions-handle.cfc) @Brad
+* [] [Custom logging](samples/10-exceptions-custom-logging.cfc) @Brad
+* [] Recovering with data - [example](samples/10-exceptions-recovery.cfc) @Brad
 * [] [Exercise 03](exercises/03-exceptions.cfc)
   * [Solution 03](solutions/03-exceptions.cfc)
 
@@ -166,14 +164,14 @@ In this session, we will explore the concepts of asynchronous and parallel progr
     * [] `Cached` : Ever expanding demand queue
     * [] `Scheduled` : Scheduled Tasks
   * [] [Checking status reinforcements](samples/09-statuschecks.cfc)
-  * [] Shutdowns and awaiting terminations - [example](samples/14-shutdown-terminations.cfc) @eric
+  * [] Shutdowns and awaiting terminations - [example](samples/14-shutdown-terminations.cfc) @Brad
   * [] Killing tasks? really? How?
   * [] [Exercise 04](exercises/04-executors.cfc)
     * [Solution 04](solutions/04-executors.cfc)
 
 ### Parallel Tasks
 
-> Eric
+> Brad
 
 * https://www.callicoder.com/java-8-completablefuture-tutorial/
 * [Combining Futures](samples/15-combine.cfc)
@@ -192,7 +190,7 @@ In this session, we will explore the concepts of asynchronous and parallel progr
 
 ### Q&A
 
-> Eric & Luis
+> Brad & Luis
 
 ### Scheduled Tasks
 
