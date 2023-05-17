@@ -23,21 +23,21 @@ In this session, we will explore the concepts of asynchronous and parallel progr
 
 > Luis
 
-- [] The NB (non-blocking) movement
+- [√] The NB (non-blocking) movement
   - Has made NodeJS shine, but other languages support this as well.
   - Movement to more async/parallel computations
   - Overall movement to the async world
-  - [] Lessons from Callbacks
+  - [√] Lessons from Callbacks
     - Also refered to as **Callback hell** 🔥
       - Example: [Callback Hell](samples/00-callback-hell.md)
     - Can make developers cry 😢
     - Never ending nesting collection of closures/functions 🕷️
     - Callbacks could be called multiple times by the other library.
     - Who has been there before?  Don't lie! 🤥
-  - [] Movement to promises
+  - [√] Movement to promises
     - JavaScript has made this very popular
     - To get some sanity back into to development from call back hellfire 🔥
-    - [] What is a promise?
+    - [√] What is a promise?
       - Can have 3 different states:
         - `Resolve` : When completed
         - `Reject`  : Error or something else
@@ -47,7 +47,7 @@ In this session, we will explore the concepts of asynchronous and parallel progr
       - `Data`
       - `Error`
   - [] What about ColdFusion?
-    - [] `cfthread`, right?? right? right? 🤔
+    - [√] `cfthread`, right?? right? right? 🤔
       - Great BUUUUUUT for **very very very very** basic threading
       - Easy, but plagued with issues, which makes developers **ALSO** cry :😢
         - No way to choose where it runs (thread pool)
@@ -56,7 +56,7 @@ In this session, we will explore the concepts of asynchronous and parallel progr
         - No functional approaches to coding them
         - Managing multiple threads and joining can be cumbersome and terrifying 🧟‍♀️
         - Example: [Interceptor State Manager - Process Async All](coldbox/system/web/context/InterceptorState.cfc)
-    - [] `runAsync()` => Nothing existed until ACF2018/Lucee 5.3
+    - [√] `runAsync()` => Nothing existed until ACF2018/Lucee 5.3
       - A step up, but not a big step
       - Still Many Issues:
         - Backed by a custom wrapper to `java.util.concurrent.Future`
@@ -69,7 +69,7 @@ In this session, we will explore the concepts of asynchronous and parallel progr
           - [runAsync() example](samples/02-runAsync-limitations.cfc)
         - No way to combine/compose futures
         - Only works with closures, does not work on actually calling component methods
-    - [] `{x}map(), {x}each()` parallel processing
+    - [√] `{x}map(), {x}each()` parallel processing
       - Adobe 2021+ & Lucee 5+
       - Limited to 50 threads in Adobe, 10 standard edition
       - Easy to use
@@ -80,7 +80,7 @@ In this session, we will explore the concepts of asynchronous and parallel progr
         - No consistency
         - No logging
       - Example: [Native Parallel Programming](samples/03-parallel-native.cfc)
-    - [] Asynchronous Programming is NOT Easy!
+    - [√] Asynchronous Programming is NOT Easy!
       - [] Concurrency issues / Race conditions
         - Know the limitations on shared resources
         - Some data structures allow for multiple threads, some don’t, some you need to wrap to make them concurrent
@@ -104,15 +104,15 @@ In this session, we will explore the concepts of asynchronous and parallel progr
 
 > Brad
 
-- [] ColdBox Futures are similar to JavaScript Promises but backed by the Java API of `CompletableFuture`
-  - JDK 8 Introduced `CompletableFutures`, `CompletionStages`, Executors, Lambdas and much more.
+- [] 📦 ColdBox Futures are similar to JavaScript Promises but backed by the Java API of `CompletableFuture`
+  - ☕️ JDK 8 Introduced `CompletableFutures`, `CompletionStages`, Executors, Lambdas and much more.
   - 🦄 Java `CompletableFutures` are like JavaScript Promises, but you know Java devs, over complicate things, even names!
   - We have ported the majority of this functionality to CFML: `ColdBox Futures`
     - ColdBox, WireBox, CacheBox and LogBox
   - Adapted for our dynamic language => many enhancements
   - [] `AsyncManager` class in charge of all async capabilities
     - **Standalone**: create an instance as a singleton
-    - **ColdBox**: `async()` or `inject:AsyncManager@coldbox`
+    - **ColdBox**: `async()` or `inject:AsyncManager@coldbox` or `Async@coreDelegates`
     - **Functions**:
       - Create Futures
       - Create/Manage Executors
