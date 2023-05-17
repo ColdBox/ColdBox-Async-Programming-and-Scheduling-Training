@@ -1,11 +1,5 @@
 component extends="../BaseTask" {
 
-	function compute(){
-		sleep( 3000 )
-		print.greenLine( "Computing from: #getThreadname()#" ).toConsole();
-		return 2;
-	}
-
 	function run(){
 		print.blueLine( "Starting from: #getThreadname()#" )
 
