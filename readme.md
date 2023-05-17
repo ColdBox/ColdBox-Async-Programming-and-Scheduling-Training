@@ -104,7 +104,7 @@ In this session, we will explore the concepts of asynchronous and parallel progr
 
 > Brad
 
-- [] 📦 ColdBox Futures are similar to JavaScript Promises but backed by the Java API of `CompletableFuture`
+- [√] 📦 ColdBox Futures are similar to JavaScript Promises but backed by the Java API of `CompletableFuture`
   - ☕️ JDK 8 Introduced `CompletableFutures`, `CompletionStages`, Executors, Lambdas and much more.
   - 🦄 Java `CompletableFutures` are like JavaScript Promises, but you know Java devs, over complicate things, even names!
   - We have ported the majority of this functionality to CFML: `ColdBox Futures`
@@ -135,7 +135,7 @@ In this session, we will explore the concepts of asynchronous and parallel progr
 > Luis
 
 - [] 🎩 It's all about that pipeline |||||||
-  - [] Java API: `thenApply()`, `thenAccept()`, `thenRun()`, why?
+  - [√] Java API: `thenApply()`, `thenAccept()`, `thenRun()`, why?
     - [![Java Pipeline Methods Explained](samples/21-java-completable-future-methods-explained.png)]
     - (http://codeflex.co/java-multithreading-completablefuture-explained/)
   - [] ⚡️ CF API: `then()` and `thenRun()` (Easier + Dynamic API)
@@ -144,8 +144,8 @@ In this session, we will explore the concepts of asynchronous and parallel progr
   - ⨠ [Magical Pipelines](samples/06-then.cfc)
   - 💿 [Data Transformations](samples/07-data-transformations.cfc)
   - ⌚️ [Dealing with Timeouts](samples/08-timeouts.cfc)
-    - Success on timeout
-    - Exception on timeout
+    - ✅ Success on timeout
+    - ❌ Exception on timeout
   - 🔋[Checking status](samples/09-statuschecks.cfc)
     - Pipelines are independent of data
   - 💪 [Exercise 02](exercises/02-pipelines-and-statuses.cfc)
