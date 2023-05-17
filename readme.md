@@ -127,8 +127,8 @@ In this session, we will explore the concepts of asynchronous and parallel progr
   - [] Creating the Future!! 🚀🚀🚀
     - [] [cbFutures Stages](samples/04-cbfutures-stages.md)
     - [] [Create a future](samples/05-creating-future.cfc)
-    - [Exercise 01](exercises/01-intro-to-futures.cfc)
-    - [Solution 01](solutions/01-intro-to-futures.cfc)
+    - 💪 [Exercise 01](exercises/01-intro-to-futures.cfc)
+      - [Solution 01](solutions/01-intro-to-futures.cfc)
 
 ### 🎩 Magical Pipelines 🐇
 
@@ -138,16 +138,17 @@ In this session, we will explore the concepts of asynchronous and parallel progr
   - [] Java API: `thenApply()`, `thenAccept()`, `thenRun()`, why?
     - [![Java Pipeline Methods Explained](samples/21-java-completable-future-methods-explained.png)]
     - (http://codeflex.co/java-multithreading-completablefuture-explained/)
-  - [] CF API: `then()` and `thenRun()` (Easier + Dynamic API)
-    - [] Curiosity: `CompletableFutures` never end!  This is So Ironic! Sharknado! :shark:
-  - [Magical Pipelines](samples/06-then.cfc)
-  - [Data Transformations](samples/07-data-transformations.cfc)
-  - [Dealing with Timeouts](samples/08-timeouts.cfc)
+  - [] ⚡️ CF API: `then()` and `thenRun()` (Easier + Dynamic API)
+    - [] Curiosity: `CompletableFutures` never end!
+        🦈🌪 This is So Ironic! Sharknado! 🦈🌪
+  - ⨠ [Magical Pipelines](samples/06-then.cfc)
+  - 💿 [Data Transformations](samples/07-data-transformations.cfc)
+  - ⌚️ [Dealing with Timeouts](samples/08-timeouts.cfc)
     - Success on timeout
     - Exception on timeout
-  - [Checking status](samples/09-statuschecks.cfc)
-  - Pipelines are independent of data
-  - [Exercise 02](exercises/02-pipelines-and-statuses.cfc)
+  - 🔋[Checking status](samples/09-statuschecks.cfc)
+    - Pipelines are independent of data
+  - 💪 [Exercise 02](exercises/02-pipelines-and-statuses.cfc)
     - [Solution 02](solutions/02-pipelines-and-statuses.cfc)
 
 ### Dealing With Exceptions
