@@ -6,17 +6,17 @@ component extends="../BaseTask" {
 		return 2;
 	}
 
-	function run() {
-
+	function run(){
 		print.blueLine( "Starting from: #getThreadname()#" )
 
-		var future = asyncManager.newFuture( () => compute( 2 ) )
-			.then( (data) => {
+		var future = asyncManager
+			.newFuture( () => compute( 2 ) )
+			.then( ( data ) => {
 				// Where is this executing? same thread?
 				// Think about it, we want a non-blocking mode.
-				//print.redLine( "Executing from: #getThreadname()#" )
+				// print.redLine( "Executing from: #getThreadname()#" )
 				print.greenLine( data ).toConsole();
-				//return data;
+				// return data;
 			} );
 
 		// Get the results and print: Remember, we are blocking here

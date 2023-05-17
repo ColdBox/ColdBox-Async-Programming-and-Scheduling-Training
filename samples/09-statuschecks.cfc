@@ -1,19 +1,18 @@
 component extends="../BaseTask" {
 
-	function init() {
+	function init(){
 		variables.threadPool = asyncManager.newExecutor( "myThreads" );
 	}
 
-    function run() {
-		var future = asyncManager.newFuture(
-				() => {
-					while( true ){
-						sleep( 500 );
-						print.greenLine( "to infinity and beyond..." ).toConsole();
-					}
-					return -1;
-				}, threadPool
-			)
+	function run(){
+		var future = asyncManager
+			.newFuture( () => {
+				while ( true ) {
+					sleep( 500 );
+					print.greenLine( "to infinity and beyond..." ).toConsole();
+				}
+				return -1;
+			}, threadPool )
 			.completeOnTimeout( 0, 5000 );
 
 		print.greenLine( "Siesta time..." )
@@ -44,7 +43,6 @@ component extends="../BaseTask" {
 		print.line( "Shutting down the thread pool" ).toConsole();
 		threadPool.shutdownNow();
 		print.line( "Thread pool shut down" ).toConsole();
-
-    }
+	}
 
 }

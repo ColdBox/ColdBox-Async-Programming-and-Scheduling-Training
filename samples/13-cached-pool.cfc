@@ -1,8 +1,8 @@
 component extends="../BaseTask" {
 
-	function init() {
+	function init(){
 		super.init();
-		variables.ioBound = asyncManager.newExecutor( name : "ioBound", type: "cached" );
+		variables.ioBound = asyncManager.newExecutor( name: "ioBound", type: "cached" );
 	}
 
 	function compute(){
@@ -16,18 +16,16 @@ component extends="../BaseTask" {
 		return asyncManager.newFuture( () => compute(), ioBound )
 	}
 
-	function run() {
-
+	function run(){
 		print.blueLine( "Starting from: #getThreadname()#" ).toConsole();
 
-		create().then( (data) => {
+		create().then( ( data ) => {
 			// Where is this executing now?
 			print.redLine( "Executing from: #getThreadname()#" ).toConsole();
 			print.greenLine( data ).toConsole();
 		} );
 
 		sleep( 2000 );
-
 	}
 
 	function getThreadname(){

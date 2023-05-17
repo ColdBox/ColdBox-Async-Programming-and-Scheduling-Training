@@ -34,7 +34,7 @@ In this session, we will explore the concepts of asynchronous and parallel progr
     - [] Never ending nesting collection of closures/functions 🕷️
     - [] Callbacks could be called multiple times by the other library.
     - [] Who has been there before?  Don't lie! 🤥
-  - [] Movement to **promises**
+  - [] Movement to promises
     - [] JavaScript has made this very popular
     - [] To get some sanity back into to development from call back hellfire 🔥
     - [] What is a promise?
@@ -60,19 +60,22 @@ In this session, we will explore the concepts of asynchronous and parallel progr
       - [] A step up, but not a big step
       - [] Still Many Issues:
         - [] Backed by a custom wrapper to `java.util.concurrent.Future`
-        - [] Simplistic error handler with no way to recover or continue executing pipelines after an exception. Concept of two tracks is broken!
-        - [] No way to choose or reuse the executor to run the sub-sequent `then()` operations.  Lucee actually creates a new `singleThreadExecutor()` for EVERY `then()` operation.
+        - [] Simplistic error handler with no way to recover
+        - [] No way to continue executing pipelines after an exception.
+        - [] Concept of two tracks is broken!
+        - [] No way to choose or reuse the executor to run the sub-sequent `then()` operations.
+        - [] Lucee actually creates a new `singleThreadExecutor()` for EVERY `then()` operation.
         - [] No way to operate on multiple futures at once
           - [runAsync() example](samples/02-runAsync-limitations.cfc)
         - [] No way to combine/compose futures
         - [] Only works with closures, does not work on actually calling component methods
-    - [] `xmap(), xeach()` parallel processing
+    - [] `{x}map(), {x}each()` parallel processing
       - Adobe 2021+ & Lucee 5+
       - Limited to 50 threads in Adobe, 10 standard edition
       - Easy to use
       - Not easy to do exception handling, actually, you can't except wrap things in multiple try/catches
       - It does short circuit exception handling
-        - NO Control over it
+        - **NO Control over it**
         - It will break out whenever an exception is detected and leave unprocessed items in a collection
         - No consistency
         - No logging

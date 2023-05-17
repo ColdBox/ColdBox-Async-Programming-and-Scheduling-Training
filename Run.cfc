@@ -1,8 +1,8 @@
 component extends="BaseTask" {
 
-    function run() {
-        // scratchpad
-        systemOutput("Hello World")
-    }
+	function run(){
+		// scratchpad
+		systemOutput( "Hello World" )
+	}
 
 }

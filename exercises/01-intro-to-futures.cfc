@@ -15,64 +15,67 @@
  */
 component extends="../BaseTask" {
 
-    /**
-     * Create a future that prints out a greeting immediately.
-     */
-    function partOne() {
-        return;
-    }
+	/**
+	 * Create a future that prints out a greeting immediately.
+	 */
+	function partOne(){
+		return;
+	}
 
-    /**
-     * Create a future that prints out a greeting after 2 seconds.
-     */
-    function partTwo() {
-        return;
-    }
+	/**
+	 * Create a future that prints out a greeting after 2 seconds.
+	 */
+	function partTwo(){
+		return;
+	}
 
-    /**
-     * Create a future that _returns_ a message to print out after 5 seconds.
-     * Print out that message on the main thread.
-     */
-    function partThree() {
-        return;
-    }
+	/**
+	 * Create a future that _returns_ a message to print out after 5 seconds.
+	 * Print out that message on the main thread.
+	 */
+	function partThree(){
+		return;
+	}
 
-    /**
-     * Create a future that _returns_ a message to print out after 5 seconds.
-     * Wait for a 3 second timeout before returning a default value.
-     * Print out that message on the main thread.
-     */
-    function partFour() {
-        return;
-    }
+	/**
+	 * Create a future that _returns_ a message to print out after 5 seconds.
+	 * Wait for a 3 second timeout before returning a default value.
+	 * Print out that message on the main thread.
+	 */
+	function partFour(){
+		return;
+	}
 
-    /**
-     * Create a future that _returns_ a message to print out after 5 seconds.
-     * Wait for a 3 second timeout. Do not return a default value.
-     * See what happens on the main thread
-     *     - when you do not wait for the future to complete?
-     *     - when you wait for the future to complete?
-     */
-    function partFive() {
-        return;
-    }
+	/**
+	 * Create a future that _returns_ a message to print out after 5 seconds.
+	 * Wait for a 3 second timeout. Do not return a default value.
+	 * See what happens on the main thread
+	 *     - when you do not wait for the future to complete?
+	 *     - when you wait for the future to complete?
+	 */
+	function partFive(){
+		return;
+	}
 
-    function run() {
-        print.blueLine( "Running all `01-intro-to-futures` exercises" ).toConsole();
-        print.yellowLine( "Press Ctrl-C to exit" ).line().toConsole();
+	function run(){
+		print.blueLine( "Running all `01-intro-to-futures` exercises" ).toConsole();
+		print
+			.yellowLine( "Press Ctrl-C to exit" )
+			.line()
+			.toConsole();
 
-        partOne();
-        partTwo();
-        partThree();
-        partFour();
-        partFive();
+		partOne();
+		partTwo();
+		partThree();
+		partFour();
+		partFive();
 
-        while ( true ) {
+		while ( true ) {
 			if ( !isNull( checkInterrupted() ) ) {
 				return;
 			}
 			sleep( 100 );
 		}
-    }
+	}
 
 }
