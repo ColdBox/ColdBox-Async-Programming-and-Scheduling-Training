@@ -1,6 +1,7 @@
 component extends="../BaseTask" {
 
 	function init(){
+        super.init();
 		variables.threadPool = asyncManager.newExecutor( "myThreads" );
 	}
 
@@ -18,14 +19,14 @@ component extends="../BaseTask" {
 		print.greenLine( "Siesta time..." )
 		sleep( 2000 );
 
-		// print.blueLine( "done? " & future.isDone() )
-		// 	.blueLine( "exception? " & future.isCompletedExceptionally() )
-		// 	.blueLine( "cancel? " & future.isCancelled() )
-		// 	.line()
-		// 	.toConsole();
+		print.blueLine( "done? " & future.isDone() )
+		 	.blueLine( "exception? " & future.isCompletedExceptionally() )
+		 	.blueLine( "cancel? " & future.isCancelled() )
+		 	.line()
+		 	.toConsole();
 
-		// print.greenLine( "Siesta time..." )
-		// sleep( 1000 );
+		print.greenLine( "Siesta time..." )
+		sleep( 1000 );
 
 		// future.cancel( true );
 
